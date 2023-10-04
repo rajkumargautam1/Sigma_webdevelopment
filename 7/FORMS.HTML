@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Contact form</h1>
+    <form action="post">
+
+
+<!-- label tag is used to specific or differnet form not the same email id used before -->
+
+        <div>
+        <label for="username">Enter Your Username</label>
+
+        <input type="text" id="username" name="username" 
+         placeholder="Username">
+
+        
+        </div>
+       
+
+
+        <!--  -->
+
+        <div>
+
+        <label for="First name"> Enter Your First Name</label>
+
+        <input type="text" name="" placeholder="First Name">
+
+        
+        </div>
+
+        <!--  -->
+        <div>
+        
+        
+        <label for="Middle name"> Enter Your Middle Name</label>
+ 
+        <input type="text" name=""
+        placeholder="Middle Name ">
+
+        </div>
+
+
+        <!--  -->
+        <div>
+
+        <label for="Last name"> Enter Your Last Name</label>
+
+        <input type="text" name="" placeholder="Last Name">
+        
+
+        </div>
+
+
+        <!-- radio button for male and female -->
+
+        <div>
+
+        <label for="Gender">Choose the Gender</label>
+
+        <input type="radio" id="Male" name="Gender" value="male">
+        <label for="">Male</label>
+
+        <input type="radio" id="female" name="Gender" value="female">
+        <label for="">female</label>
+
+        </div>
+
+
+        <div>
+            <input type="checkbox" id="checkbox" name="Notification" value="yes">
+            <label for="checkbox">Notification</label>
+        </div>
+
+        <div>
+            <label for="Comment"> Enter Your Comment Here</label>
+
+            <textarea name="Comment" id="Comment" cols="50" rows="10"></textarea>
+        </div>
+        
+        <div>
+
+        <label for="fruits">select The Months</label>
+        
+        <select name="name" id="fruits">
+            <option value="apple">jan</option>
+            <option value="banana">feb</option>
+            <option value="cherry">march</option>
+        </select>
+
+
+        </div>
+
+        <div>
+            <label for="file">Resume</label>
+            <input type="file" id="file" accept=".pdf , .DOC" >
+            
+        </div>
+
+        <DIv>
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+
+        </DIv>
+
+        <div>
+            <label for="phoneno">enter the phone no</label>
+            <input type="tel" id="phoneno" pattern="[0-9]{10}">
+        </div>
+        
+
+
+
+    </form>
+</body>
+</html>
