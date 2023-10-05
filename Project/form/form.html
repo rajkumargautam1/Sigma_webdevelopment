@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Contact form</h1>
-    <form action="post">
+    <form action="https://script.google.com/macros/s/AKfycbxQJl5fXWitM5fdkI9qs9EFb-wh6DTXC6KjpMNu9nOlOSpAmGea17B8nediHkKuuiv2/exec" name="Contactform" id="contactform" method="post" >
 
 
 <!-- label tag is used to specific or differnet form not the same email id used before -->
@@ -29,7 +29,7 @@
 
         <label for="First name"> Enter Your First Name</label>
 
-        <input type="text" name="" placeholder="First Name">
+        <input type="text" name="First name" placeholder="First Name">
 
         
         </div>
@@ -40,7 +40,7 @@
         
         <label for="Middle name"> Enter Your Middle Name</label>
  
-        <input type="text" name=""
+        <input type="text" name="Middle name"
         placeholder="Middle Name ">
 
         </div>
@@ -51,7 +51,7 @@
 
         <label for="Last name"> Enter Your Last Name</label>
 
-        <input type="text" name="" placeholder="Last Name">
+        <input type="text" name="Last name" placeholder="Last Name">
         
 
         </div>
@@ -80,14 +80,14 @@
         <div>
             <label for="Comment"> Enter Your Comment Here</label>
 
-            <textarea name="Comment" id="Comment" cols="50" rows="10"></textarea>
+            <textarea name="Comment" id="Comment" cols="50" rows="10" name="comment"></textarea>
         </div>
         
         <div>
 
         <label for="fruits">select The Months</label>
         
-        <select name="name" id="fruits">
+        <select name="name" id="fruits" name="cateorgy">
             <option value="apple">jan</option>
             <option value="banana">feb</option>
             <option value="cherry">march</option>
@@ -110,12 +110,28 @@
 
         <div>
             <label for="phoneno">enter the phone no</label>
-            <input type="tel" id="phoneno" pattern="[0-9]{10}">
+            <input type="tel" id="phoneno" pattern="[0-9]{10}" name="phone no">
+        </div>
+        <div>
+            <input type="submit" value="Submit">
         </div>
         
 
 
 
     </form>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxQJl5fXWitM5fdkI9qs9EFb-wh6DTXC6KjpMNu9nOlOSpAmGea17B8nediHkKuuiv2/exec'
+        const form = document.forms['formName']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => alert("Thank you! your form is submitted successfully." ))
+            .then(() => {  window.location.reload(); })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html>
